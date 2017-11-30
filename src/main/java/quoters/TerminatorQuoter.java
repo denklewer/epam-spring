@@ -2,6 +2,7 @@ package quoters;
 
 import javax.annotation.PostConstruct;
 @Profiling
+@DeprecatedClass(newImpl = T100.class)
 public class TerminatorQuoter implements Quoter {
     @InjectRandomInt(min = 2, max = 7)
     private int repeat;
