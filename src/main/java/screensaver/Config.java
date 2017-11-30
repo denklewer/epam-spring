@@ -9,7 +9,7 @@ import java.util.Random;
 @ComponentScan(basePackages = "screensaver")
 public class Config {
     @Bean
-    @Scope("prototype")
+    @Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS) //каждый раз получаем новый бин при обращении к color
     public Color color(){
     Random random = new Random();
     return  new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
