@@ -22,6 +22,9 @@ public class TerminatorQuoter implements Quoter {
         this.message = message;
     }
 
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
+    }
 
     @PostProxy
     public void sayQuote() {
